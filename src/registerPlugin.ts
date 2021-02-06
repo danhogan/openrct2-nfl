@@ -3,9 +3,9 @@
 import main from './main';
 
 registerPlugin({
-  name: 'MOD_NAME',
+  name: 'openrct2-nfl',
   version: '1.0',
-  authors: ['MOD_AUTHOR'],
+  authors: ['danhogan'],
   type: 'local',
   licence: 'MIT',
   main,

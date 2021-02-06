@@ -8,6 +8,24 @@ import {
   getEntertainers,
 } from './helpers';
 
+let something = function() {
+  for (let x=0; x < 100; x++){
+    for (let y=0; y < 100; y++){
+      let someSpot = map.getTile(x,y);
+      // Iterate every element on the tile
+      for (var i = 0; i < someSpot.numElements; i++) {
+        var element = someSpot.getElement(i);
+
+        element.baseHeight = 15;
+      }
+    }
+  }
+}
+
+let blah = function(){
+  console.log("blah");
+}
+
 const main = (): void => {
   console.log(`${hello()} Your plug-in has started!`);
 
@@ -19,6 +37,17 @@ const main = (): void => {
   console.log(`- ${getMechanics().length} mechanics`);
   console.log(`- ${getSecurity().length} security`);
   console.log(`- ${getEntertainers().length} entertainers`);
+
+  console.log("hey?");
+
+  // Add a menu item under the map icon on the top toolbar
+  ui.registerMenuItem("I don't know but maybe something", function() {
+    something();
+  });
+
+  ui.registerMenuItem("I don't know but maybe something", function() {
+    blah();
+  });
 };
 
 export default main;
