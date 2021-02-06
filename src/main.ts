@@ -16,7 +16,7 @@ let something = function() {
       for (var i = 0; i < someSpot.numElements; i++) {
         var element = someSpot.getElement(i);
 
-        element.baseHeight = 15;
+        element.baseHeight = 20;
       }
     }
   }
@@ -45,7 +45,7 @@ const main = (): void => {
     something();
   });
 
-  ui.registerMenuItem("I don't know but maybe something", function() {
+  ui.registerMenuItem("blahhh", function() {
     blah();
   });
 };
